@@ -1,0 +1,43 @@
+<Router>
+          <AuthProvider>
+            <Routes >
+                        <Route
+                            exact="true"
+                            caseSensitive={false}
+                            path="/"
+                            element={
+                            <PrivateRoute>
+                                <Home />
+                            </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            caseSensitive={false}
+                            path="/home"
+                            element={
+                            <PrivateRoute>
+                                <Home />
+                            </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            caseSensitive={false}
+                            path="/summarizer"
+                            element={
+                            <PrivateRoute>
+                                <Summarizer />
+                            </PrivateRoute>
+                            }
+                        />
+                        <Route
+                           caseSensitive={false}
+                            path="/predict"
+                            element={
+                            <PrivateRoute>
+                                <Predict />
+                            </PrivateRoute>
+                            }
+                        />
+            </Routes>
+          </AuthProvider>
+        </Router>
