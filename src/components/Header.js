@@ -15,17 +15,18 @@ export default function Header(){
     const { currentUser } = useAuth();
 
     return (
-        <div>
-        <Navbar color="danger" light expand="md">
-            <NavbarBrand href="/">Customer Churn Analyzer</NavbarBrand>
+        <>
+        <Navbar light expand="md" style={{height: "7vh" , backgroundColor: "#663d00"}}>
+            <NavbarBrand href="/" className="text-warning">Customer Churn Analyzer</NavbarBrand>
             
-            <NavbarText>
-            <div>
-                <AiOutlineUser>{currentUser.email}</AiOutlineUser>
-            </div>
+            <NavbarText className="ms-auto pe-3 text-white">
+            {currentUser.email || 'User'}
             </NavbarText>
+            <div>
+                <AiOutlineUser color="white"></AiOutlineUser>
+            </div>
         </Navbar>
-        </div>
+        </>
     );
 };
 

@@ -59,7 +59,7 @@ const SideNavigation = () => {
     // added styles 
     const styles = {
         sideBarHeight: {
-        height: "100vh",
+        height: "95vh",
         },
         menuIcon: {
         float: "right",

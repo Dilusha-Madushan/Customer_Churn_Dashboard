@@ -14,13 +14,11 @@ export default function Dashboard() {
 
   return (
     <>
-        <Row>
-            <Col>
-              <Header></Header>
-            </Col>
-        </Row>
-        <div>
-            <Sidebar />
+        <Header></Header>
+
+        <div class="d-flex bd-highlight">
+            <div class="bd-highlight"><Sidebar /></div>
+            <div class="flex-fill bd-highlight" style={{position: "relative"}}>
             <Routes>
                         <Route
                             exact="true"
@@ -60,7 +58,7 @@ export default function Dashboard() {
                             }
                         />
             </Routes>
-            
+            </div>
         </div>
                         
     </>

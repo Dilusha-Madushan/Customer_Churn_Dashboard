@@ -9,7 +9,7 @@ import ForgotPassword from "./ForgotPassword"
 
 function App() {
   return (
-    <div style={{background: "#ffff00"}}>
+    <div style={{background: "#ffff00"  , height: "100vh"}}>
       <Router>
           <AuthProvider>
             <Routes >

@@ -58,7 +58,7 @@ const SideNavigation = () => {
     // added styles 
     const styles = {
         sideBarHeight: {
-        height: "100vh",
+            height: "93vh",
         },
         menuIcon: {
         float: "right",
@@ -92,17 +92,17 @@ const SideNavigation = () => {
             <SidebarContent>
                                 <Menu iconShape="square">
                                 <MenuItem active={true}>
-                                    <Link to="/home" >Home</Link>
+                                    <Link to="/home" ><p>{menuCollapse ? "H" : "Home"}</p></Link>
                                 </MenuItem>
-                                <MenuItem ><Link to="/summarizer" >Summarizer</Link></MenuItem>
-                                <MenuItem ><Link to="/predict" >Predict</Link></MenuItem>
+                                <MenuItem ><Link to="/summarizer" ><p>{menuCollapse ? "S" : "Summarizer"}</p></Link></MenuItem>
+                                <MenuItem ><Link to="/predict" ><p>{menuCollapse ? "P" : "Predict"}</p></Link></MenuItem>
                                 </Menu>
                             </SidebarContent>
             <SidebarFooter>
                                 <Menu iconShape="square">
                                 <MenuItem>
                                     <div className="w-100 text-center mt-2">
-                                        <Button variant="link" onClick={handleLogout} style={{background: "black"  , borderColor: "black"}}>
+                                        <Button variant="link" onClick={handleLogout} style={{background: "black"  , borderColor: "black"}} className="text-warning">
                                             Log Out
                                         </Button>
                                     </div>

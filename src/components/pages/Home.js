@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div style={styles.sideBarHeight}>
+    <div style={{position: "absolute" , bottom: "0px" , top: "0px" , alignSelf: "center" , clear: "right"}}>
           <h1 style={{ padding: "20%" }}>Home</h1>
     </div>
   )
